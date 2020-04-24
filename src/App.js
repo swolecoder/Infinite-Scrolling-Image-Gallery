@@ -55,7 +55,6 @@ export default function App() {
           type="text"
           placeholder="Search Unsplash..."
           onChange={(e) => {
-            console.log("Ashdhjowq", e.target.value);
             setQuery(e.target.value);
           }}
           value={query}
@@ -67,10 +66,8 @@ export default function App() {
         dataLength={images.length} //This is important field to render the next data
         next={() => {
           setPage((page) => page + 1);
-          // getPhotos();
         }}
         hasMore={true}
-        // loader={<h4>Loading...</h4>}
       >
         <div className="image-grid">
           {images.map((image, index) => (
